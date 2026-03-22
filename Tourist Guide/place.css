@@ -1,0 +1,264 @@
+/* =============================================
+   Place Detail Page — place.css
+   ============================================= */
+
+/* Breadcrumb */
+.breadcrumb-bar {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
+}
+.breadcrumb-bar a {
+  color: var(--primary);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.breadcrumb-bar a:hover { text-decoration: underline; }
+.breadcrumb-bar span {
+  font-size: 0.85rem;
+  color: var(--text-s);
+}
+
+/* Back button */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--primary);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: var(--radius);
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.back-btn:hover { background: var(--primary-d); }
+
+/* Hero banner */
+.place-hero {
+  position: relative;
+  height: 220px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+}
+.place-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.12);
+  border-radius: var(--radius);
+}
+.place-hero-emoji {
+  font-size: 5.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Info bar */
+.info-bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+.info-chip {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 14px;
+  font-size: 0.88rem;
+  color: var(--text-m);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: var(--shadow);
+}
+.info-chip strong { color: var(--text); }
+
+/* Title block */
+.place-title-block {
+  margin-bottom: 1.75rem;
+}
+.place-title-block h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+.place-full-desc {
+  font-size: 0.97rem;
+  color: var(--text-m);
+  line-height: 1.8;
+  margin-top: 10px;
+  max-width: 740px;
+}
+
+/* Two-column grid */
+.place-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* Section cards */
+.section-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow);
+}
+.section-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1rem;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Photo grid */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.photo-cell {
+  border-radius: 10px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.photo-cell:hover { transform: scale(1.04); }
+.photo-emoji { font-size: 2.2rem; }
+
+/* Activities */
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.activity-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  transition: box-shadow 0.2s;
+}
+.activity-card:hover { box-shadow: var(--shadow); }
+.activity-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+.activity-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+.activity-desc {
+  font-size: 0.82rem;
+  color: var(--text-m);
+  line-height: 1.55;
+}
+
+/* Popular list */
+.popular-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.popular-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--text-m);
+}
+.popular-item:last-child { border-bottom: none; }
+.popular-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary);
+  flex-shrink: 0;
+}
+
+/* Quick info table */
+.quick-info { padding: 1.25rem; }
+.info-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.info-table tr { border-bottom: 1px solid var(--border); }
+.info-table tr:last-child { border-bottom: none; }
+.info-label {
+  padding: 9px 0;
+  color: var(--text-s);
+  width: 80px;
+  vertical-align: top;
+}
+.info-value {
+  padding: 9px 0;
+  color: var(--text);
+  font-weight: 500;
+}
+.info-value a { color: var(--primary); }
+.info-value a:hover { text-decoration: underline; }
+
+/* Traveller tip */
+.tip-card {
+  background: var(--primary-l);
+  border: 1px solid #a8d8cc;
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Update city.jsp place cards to be clickable */
+.place-card-link {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+.place-card-link .place-card {
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.15s;
+}
+.place-card-link:hover .place-card {
+  border-color: var(--primary);
+  box-shadow: 0 4px 16px rgba(26,107,90,0.12);
+  transform: translateY(-2px);
+}
+
+.view-detail-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--primary);
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .place-grid { grid-template-columns: 1fr; }
+  .activity-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .photo-grid { grid-template-columns: repeat(2, 1fr); }
+  .place-hero { height: 160px; }
+  .place-hero-emoji { font-size: 4rem; }
+}
