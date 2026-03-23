@@ -1,8 +1,6 @@
 package model;
 
-/**
- * Place JavaBean - represents a tourist place within a city.
- */
+
 public class Place {
     private int    id;
     private int    cityId;
