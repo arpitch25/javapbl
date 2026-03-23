@@ -18,10 +18,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-/**
- * CityServlet - handles city detail page.
- * URL: /city?id=1
- */
+
 @WebServlet("/city")
 public class CityServlet extends HttpServlet {
 
