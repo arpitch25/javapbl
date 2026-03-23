@@ -7,12 +7,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * CityDAO - Data Access Object for City operations via JDBC.
- */
+
 public class CityDAO {
 
-    /** Retrieve all cities ordered by name. */
     public List<City> getAllCities() throws SQLException {
         List<City> cities = new ArrayList<>();
         String sql = "SELECT id, name, theme, history, highlight, badge_class FROM cities ORDER BY name";
@@ -28,7 +25,7 @@ public class CityDAO {
         return cities;
     }
 
-    /** Retrieve a single city by its ID. Returns null if not found. */
+
     public City getCityById(int id) throws SQLException {
         String sql = "SELECT id, name, theme, history, highlight, badge_class FROM cities WHERE id = ?";
 
@@ -45,7 +42,7 @@ public class CityDAO {
         return null;
     }
 
-    /** Search cities by name (case-insensitive partial match). */
+
     public List<City> searchCities(String keyword) throws SQLException {
         List<City> cities = new ArrayList<>();
         String sql = "SELECT id, name, theme, history, highlight, badge_class FROM cities " +
@@ -67,7 +64,7 @@ public class CityDAO {
         return cities;
     }
 
-    /** Insert a new city. Returns generated ID. */
+
     public int addCity(City city) throws SQLException {
         String sql = "INSERT INTO cities (name, theme, history, highlight, badge_class) VALUES (?, ?, ?, ?, ?)";
 
