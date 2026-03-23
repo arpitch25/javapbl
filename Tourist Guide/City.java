@@ -1,16 +1,11 @@
 package model;
-
-/**
- * City JavaBean - represents a tourist city.
- * Follows JavaBean convention (private fields + public getters/setters).
- */
 public class City {
     private int    id;
     private String name;
     private String theme;
     private String history;
     private String highlight;
-    private String badgeClass; // CSS class for theme badge colour
+    private String badgeClass; // made css class for theme or color
 
     public City() {}
 
