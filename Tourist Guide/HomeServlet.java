@@ -14,10 +14,6 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-/**
- * HomeServlet - handles the homepage.
- * URL: /home  or  /  (mapped in web.xml)
- */
 @WebServlet("/home")
 public class HomeServlet extends HttpServlet {
 

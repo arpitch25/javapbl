@@ -8,11 +8,6 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-/**
- * LogFilter - Java Servlet Filter.
- * Intercepts every request and logs it to the console.
- * Demonstrates Java Filter usage for the project.
- */
 @WebFilter("/*")
 public class LogFilter implements Filter {
 
