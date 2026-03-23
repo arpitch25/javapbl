@@ -2,10 +2,6 @@ package model;
 
 import java.util.List;
 
-/**
- * PlaceDetail JavaBean - extended place info including
- * photos, activities and popular things.
- */
 public class PlaceDetail {
     private int    id;
     private int    cityId;
@@ -25,7 +21,7 @@ public class PlaceDetail {
 
     public PlaceDetail() {}
 
-    // --- Getters ---
+    // getterssssss
     public int          getId()            { return id; }
     public int          getCityId()        { return cityId; }
     public String       getName()          { return name; }
@@ -59,7 +55,7 @@ public class PlaceDetail {
         return (entryFee == 0) ? "Free" : "₹" + (int) entryFee;
     }
 
-    // --- Inner class: Activity ---
+
     public static class Activity {
         private String icon;
         private String name;
